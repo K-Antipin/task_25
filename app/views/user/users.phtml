@@ -1,0 +1,45 @@
+<h1>Users</h1>
+<?php
+
+
+$skip = ['bean'];
+// print_r($payload);
+?>
+
+
+<table class="table table-hover">
+  <thead>
+    <tr>
+      <th scope="col">ID</th>
+      <th scope="col">Username</th>
+      <th scope="col">Email</th>
+      <th scope="col">Password hash</th>
+      <th scope="col">User hash</th>
+      <th scope="col">IP</th>
+      <th scope="col">Date registratons</th>
+      <th scope="col">Last activity</th>
+      <th scope="col">Role</th>
+    </tr>
+  </thead>
+  <tbody>
+    <?php
+
+foreach($payload as $bean) {
+    ?>
+    <tr>
+      <?php
+      foreach($bean as $key => $value) {
+          if (in_array($key, $skip)) {
+              continue;
+          }?>
+      <td scope="row"><?= $value; ?></td>
+      <?php
+      }
+    ?>
+    </tr>
+    <?php
+}
+?>
+
+  </tbody>
+</table>
