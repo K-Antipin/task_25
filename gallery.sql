@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Хост: 192.168.0.102:3306
--- Время создания: Апр 20 2023 г., 15:03
+-- Время создания: Апр 21 2023 г., 09:09
 -- Версия сервера: 8.0.30
 -- Версия PHP: 8.1.9
 
@@ -80,8 +80,8 @@ CREATE TABLE `users` (
   `user_ip` bigint DEFAULT '0',
   `created` datetime DEFAULT NULL,
   `updated` datetime DEFAULT NULL,
-  `role` varchar(191) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci ROW_FORMAT=DYNAMIC;
+  `role` varchar(191) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_520_ci ROW_FORMAT=DYNAMIC;
 
 --
 -- Дамп данных таблицы `users`
