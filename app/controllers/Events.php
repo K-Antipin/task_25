@@ -31,7 +31,7 @@ class Events extends Controller
 
     public function showMess()
     {
-        // \var_dump(die(\json_encode(['mess' => $_POST])));
+        // \var_dump(DB::findAll('comment'));
         if (
             !isset($_POST)
             || $_SERVER["REQUEST_METHOD"] !== "POST"

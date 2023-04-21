@@ -14,6 +14,6 @@ class File
     {
         $this->file_name = $entity->file_name;
         $this->user_id = $entity->user_id;
-        $this->created = DateTime::createFromFormat('U', time());
+        $this->created = time();
     }
 }

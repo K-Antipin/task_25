@@ -243,9 +243,9 @@ if (imgView) {
                     li.setAttribute('data-mess-id', data.mess[i].id);
                     if (data.mess[i].user_id === getCookie('id')) {
                         document.querySelector('#pictureHeader').prepend();
-                        li.innerHTML = `<div><b>${data.mess[i].name}:</b><span style="background-color:azure">${data.mess[i].comment}</span></div><div><i class="dateTime">${new Date(data.mess[i].created + ' UTC').toLocaleString()}</i><img class="bascetMess" src="/assets/img/icon/basket.svg"></div>`;
+                        li.innerHTML = `<div><b>${data.mess[i].name}:</b><span style="background-color:azure">${data.mess[i].comment}</span></div><div><i class="dateTime">${new Date(data.mess[i].created * 1000).toLocaleString()}</i><img class="bascetMess" src="/assets/img/icon/basket.svg"></div>`;
                     } else {
-                        li.innerHTML = `<div><b>${data.mess[i].name}:</b><span style="background-color:azure">${data.mess[i].comment}</span></div><i class="dateTime">${new Date(data.mess[i].created + ' UTC').toLocaleString()}</i>`;
+                        li.innerHTML = `<div><b>${data.mess[i].name}:</b><span style="background-color:azure">${data.mess[i].comment}</span></div><i class="dateTime">${new Date(data.mess[i].created * 1000).toLocaleString()}</i>`;
                     }
                     ul.appendChild(li);
                 }
@@ -307,9 +307,9 @@ if (document.forms.formComments) {
                         li.classList.add('list-group-item', 'd-flex', 'justify-content-between');
                         li.setAttribute('data-mess-id', data.mess[i].id);
                         if (data.mess[i].user_id === getCookie('id')) {
-                            li.innerHTML = `<div><b>${data.mess[i].name}:</b><span style="background-color:azure">${data.mess[i].comment}</span></div><div><i class="dateTime">${new Date(data.mess[i].created + ' UTC').toLocaleString()}</i><img class="bascetMess" src="/assets/img/icon/basket.svg"></div>`;
+                            li.innerHTML = `<div><b>${data.mess[i].name}:</b><span style="background-color:azure">${data.mess[i].comment}</span></div><div><i class="dateTime">${new Date(data.mess[i].created * 1000).toLocaleString()}</i><img class="bascetMess" src="/assets/img/icon/basket.svg"></div>`;
                         } else {
-                            li.innerHTML = `<div><b>${data.mess[i].name}:</b><span style="background-color:azure">${data.mess[i].comment}</span></div><i class="dateTime">${new Date(data.mess[i].created + ' UTC').toLocaleString()}</i>`;
+                            li.innerHTML = `<div><b>${data.mess[i].name}:</b><span style="background-color:azure">${data.mess[i].comment}</span></div><i class="dateTime">${new Date(data.mess[i].created * 1000).toLocaleString()}</i>`;
                         }
                         ul.appendChild(li);
                     }

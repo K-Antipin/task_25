@@ -16,6 +16,6 @@ class Comment
         $this->user_id = $entity->user_id;
         $this->comment = $entity->comment;
         $this->img_id = $entity->img_id;
-        $this->created = DateTime::createFromFormat('U', time());
+        $this->created = time();
     }
 }

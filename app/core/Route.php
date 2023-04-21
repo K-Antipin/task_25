@@ -10,6 +10,7 @@ class Route
 {
     public static function start()
     {
+        // \var_dump(DB::findAll('users'));
         // значения по умолчанию
         $controllerClassname = 'home';
         $actionName = 'index';

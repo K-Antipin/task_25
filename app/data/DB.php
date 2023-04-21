@@ -8,11 +8,7 @@ use RedBeanPHP\RedException;
 $config = include_once DATA . 'db.mysql.php';
 
 try {
-    R::setup(
-        'mysql:host=' . $config['host'] . ';dbname=' . $config['db'] . '',
-        $config['username'],
-        $config['password']
-    );
+    R::setup('sqlite:' . DATA . 'gallary.db');
     if (!R::testConnection()) {
         throw new RedException('No connection');
     }

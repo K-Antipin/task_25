@@ -20,7 +20,7 @@ class User
         $this->password = $entity->password;
         $this->user_hash = $entity->user_hash;
         $this->user_ip = $entity->user_ip;
-        $this->created = DateTime::createFromFormat('U', time());
+        $this->created = time();
         self::setRole($entity->role);
     }
     public function setRole($role  = null)

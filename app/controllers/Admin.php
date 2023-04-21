@@ -71,7 +71,7 @@ class Admin extends Controller
                     $obj->id = $user->id;
                     $obj->user_hash = $hash;
                     $obj->user_ip = ip2long($_SERVER['REMOTE_ADDR']);
-                    $obj->updated = DateTime::createFromFormat('U', time());
+                    $obj->updated = time();
                     DB::update($obj, 'users');
                     setcookie("id", $user['id'], time() + 60 * 60 * 24 * 30, "/");
                     setcookie("name", $user['name'], time() + 60 * 60 * 24 * 30, "/");
@@ -118,7 +118,7 @@ class Admin extends Controller
                     setcookie("id", $id, time() + 60 * 60 * 24 * 30, "/");
                     setcookie("name", $_POST['name'], time() + 60 * 60 * 24 * 30, "/");
                     setcookie('hash', $hash, time() + 60 * 60 * 24 * 30, '/', $_SERVER['SERVER_NAME'], false, true);
-                    setcookie('role', $user['role'], time() + 60 * 60 * 24 * 30, '/', $_SERVER['SERVER_NAME'], false, true);
+                    setcookie('role', $user->role, time() + 60 * 60 * 24 * 30, '/', $_SERVER['SERVER_NAME'], false, true);
                     setcookie('auth', 1, time() + 60 * 60 * 24 * 30, '/', $_SERVER['SERVER_NAME'], false, true);
                     die(\json_encode('Успешная регистрация'));
                 } else {
