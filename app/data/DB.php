@@ -5,8 +5,6 @@ namespace App\data;
 use RedBeanPHP\R;
 use RedBeanPHP\RedException;
 
-$config = include_once DATA . 'db.mysql.php';
-
 try {
     R::setup('sqlite:' . DATA . 'gallary.db');
     if (!R::testConnection()) {
