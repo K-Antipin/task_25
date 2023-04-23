@@ -6,7 +6,7 @@ use RedBeanPHP\R;
 use RedBeanPHP\RedException;
 
 try {
-    R::setup('sqlite:' . DATA . 'gallary.db');
+    R::setup('sqlite:' . DATA . 'gallary.sqlite');
     if (!R::testConnection()) {
         throw new RedException('No connection');
     }
